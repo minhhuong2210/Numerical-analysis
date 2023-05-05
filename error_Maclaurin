@@ -1,0 +1,22 @@
+import math]
+pi_exact = pi
+x1 = float(input())
+x2 = float(input())
+def arctan(x):
+    arctan = x - (1/3)*(x**3) + (1/5)*(x**5)
+    return arctan
+def abs_err(pi_exact, pi_approx):
+    answer = abs(pi_exact - pi_approx)
+def rel_err = abs_err(pi_exact, pi_approx)/abs(pi_approx)
+def 1_a(x1, x2):
+    pi_approx = 4*(arctan(x1) + arctan(x2))
+    abs = abs_err(pi_exact, pi_approx)
+    print("Sai so tuyet doi bai 1a = " + srt(float(abs)))
+    rel = rel_err(pi_exact, pi_approx)
+    print("Sai so tuong doi bai 1a = " + srt(float(rel)))
+def 1_b(x1, x2):
+    pi_approx = 16*arctan(x1) - 4*arctan(x2))
+     abs = abs_err(pi_exact, pi_approx)
+    print("Sai so tuyet doi bai 1b = " + srt(float(abs)))
+    rel = rel_err(pi_exact, pi_approx)
+    print("Sai so tuong doi bai 1b= " + srt(float(rel)))

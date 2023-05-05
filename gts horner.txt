@@ -1,0 +1,32 @@
+#horner
+list = []
+x = float(input())
+n = int(input())
+for i in range(n):
+    list.append(int(input()))
+list.reverse()
+print(list)
+Pn = list[0]
+for i in range(n-1):
+    Pn = Pn*x + (list[i+1])
+print(Pn)
+
+
+#khong dung horner bai 1 
+x = float(input())
+Pn = 0
+n = 2022
+for i in range(n+1):
+    Pn += (i+1)*(x**i)
+
+print(Pn)
+
+#dung horner bai 1
+
+x = float(input())
+n = 2023
+Pn = n
+for i in range(n):
+    Pn = Pn*x + (n-i-1)
+    
+print(Pn)

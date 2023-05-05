@@ -1,0 +1,37 @@
+import math
+a_exact = 10.00
+a_approx = float(input())
+b_exact = 0.0356
+b_approx = float(input())
+c_exact = 15300
+c_approx = float(input())
+d_exact = 62000
+d_approx = float(input())
+def sstuyetdoi(exact, approx):
+  answer = abs(exact - approx)
+  return answer
+def sstuongdoi(exact, approx):
+  answer = sstuyetdoi(exact, approx)/abs(approx)
+  return answer
+tuongdoi = 0
+tuyetdoi = 0
+def S1(a_exact, a_approx, b_exact, b_approx, c_exact, c_approx, d_exact, d_approx):
+  tuyetdoi = sstuyetdoi(a_exact, a_approx) + sstuyetdoi(b_exact, b_approx) + sstuyetdoi(c_exact, c_approx) + sstuyetdoi(d_exact, d_approx)
+  print("Sai so tuyet doi S1 = " + str(float(tuyetdoi)))
+def S2(a_exact, a_approx, c_exact, c_approx, d_exact, d_approx):
+  tuyetdoi = sstuyetdoi(a_exact, a_approx) + 5*sstuyetdoi(c_exact, c_approx) + sstuyetdoi(d_exact, d_approx)
+  print("Sai so tuyet doi S2 = " + str(float(tuyetdoi))) 
+def S3(c_exact, c_approx):
+  tuongdoi = 3*sstuongdoi(c_exact, c_approx)
+  print("Sai so tuong doi S3 = " + str(float(tuongdoi)))
+  tuyetdoi = tuongdoi*(3*c_approx)
+  print("Sai so tuyet doi S3 = " + str(float(tuyetdoi)))
+def S4(a_exact, a_approx, c_exact, c_approx, d_exact, d_approx):
+  tuongdoi = sstuongdoi(a_exact, a_approx) + sstuongdoi(c_exact, c_approx) + sstuongdoi(d_exact, d_approx)
+  print("Sai so tuong doi S4 = " + str(float(tuongdoi)))
+  tuyetdoi = tuongdoi*float((a_approx+c_approx+d_approx))
+  print("Sai so tuyet doi S4 = " + str(float(tuyetdoi)))
+S1(a_exact, a_approx, b_exact, b_approx, c_exact, c_approx, d_exact, d_approx)
+S2(a_exact, a_approx, c_exact, c_approx, d_exact, d_approx)
+S3(c_exact, c_approx)
+S4(a_exact, a_approx, c_exact, c_approx, d_exact, d_approx)

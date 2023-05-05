@@ -1,0 +1,15 @@
+from scipy import array
+from scipy import random 
+import scipy.linalg as la #linalg = linear algebra
+from time import time
+for i in range(1,10):
+  n = i * 1000
+  A = random.rand(n,n)
+  b = random.rand(n,1)
+
+  tic = time()
+  x = la.solve(A,b)
+  toc = time()
+
+  #print(x)
+  print('processing time is: ', toc-tic, 'sec. (second)')
